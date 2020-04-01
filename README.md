@@ -1,6 +1,4 @@
-# slickjs-carousels
-
-https://tomkim825.github.io/slickjs-carousels/
+# slickjs-carousels @ https://tomkim825.github.io/slickjs-carousels/
 
   <h2>
     Carousels using slickjs. Full documentation can be found here: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a>

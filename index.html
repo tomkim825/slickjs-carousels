@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>slickjs carousels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+</head>
+
+<body>
+</body>
+
+
+<style>
+  .slide{height: 100px;width: 100px;background-color: #777777}
+  ul.slick-carousel-hp {box-sizing: border-box;}
+  .slick-carousel-hp .slick-prev:before {-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+  .slick-carousel-hp .slick-arrow:before { margin: 0 auto; display: block; content: ''; width: 20px; height: 20px; border: 2px solid #000; border-right: none; border-bottom: none; background: 0 0;}
+  .slick-carousel-hp .slick-next:before {-webkit-transform: rotate(135deg); transform: rotate(135deg); }
+  .slick-carousel-hp .slick-arrow:before { margin: 0 auto; display: block; content: ''; width: 20px; height: 20px; border: 2px solid #000;  border-right: none; border-bottom: none;  background: 0 0;}
+  .slick-carousel-hp .slick-arrow{ top: 55%; z-index:100;  }
+  .slick-carousel-hp .slick-arrow.slick-prev{ left: 6px; }
+  .slick-carousel-hp .slick-arrow.slick-next{ right: 6px; }
+</style>
+
+<ul class="slick-carousel-hp">
+  <li class="slide"> Text 1</li>
+  <li class="slide"> Text 2</li>
+  <li class="slide"> Text 3</li>
+  <li class="slide"> Text 4</li>
+  <li class="slide"> Text 5</li>
+  <li class="slide"> Text 6</li>
+  <li class="slide"> Text 7</li>
+  <li class="slide"> Text 8</li>
+</ul>
+
+<script>
+  $(document).ready(function(){
+    $('.slick-carousel-hp').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      dots:true,
+      responsive: [
+          {
+          breakpoint: 640,
+          settings: {
+            dots:true,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        } 
+      ]
+    });
+    $('.slick-prev.slick-arrow').hide();
+    $('.slick-carousel-hp').one('afterChange', function() {$('.slick-prev.slick-arrow').show();});
+  })
+</script>

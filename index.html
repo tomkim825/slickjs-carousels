@@ -12,16 +12,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 </head>
 
-<body>
-</body>
-
-
 <style>
   *{text-align:center;}
-  .slide{color: #fff; padding-top: 25px;height: 100px;width: 100px; vertical-align: middle; margin: 0 5px; max-width: 25%;}
-  @media screen and (max-width:640px){.slide{max-width:50%;}}
-  .slide:nth-child(even){background-color:crimson}
-  .slide:nth-child(odd){background-color:#000}
+  ul.slick-carousel-hp li{color: #fff; padding-top: 25px;height: 100px;width: 100px; vertical-align: middle; margin: 0 5px; max-width: 25%;}
+  @media screen and (max-width:640px){ul.slick-carousel-hp li{max-width:50%;}}
+  ul.slick-carousel-hp li:nth-child(even){background-color:crimson}
+  ul.slick-carousel-hp li:nth-child(odd){background-color:#000}
   ul.slick-carousel-hp {box-sizing: border-box;max-width: 96%; margin: auto;}
   .slick-carousel-hp .slick-prev:before {-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
   .slick-carousel-hp .slick-arrow:before { margin: 0 auto; display: block; content: ''; width: 20px; height: 20px; border: 2px solid #000; border-right: none; border-bottom: none; background: 0 0;}
@@ -32,22 +28,24 @@
   /* .slick-carousel-hp .slick-arrow.slick-next{ right: 6px; } */
 </style>
 
-<ul class="slick-carousel-hp">
-  <li class="slide"> Text 1</li>
-  <li class="slide"> Text 2</li>
-  <li class="slide"> Text 3</li>
-  <li class="slide"> Text 4</li>
-  <li class="slide"> Text 5</li>
-  <li class="slide"> Text 6</li>
-  <li class="slide"> Text 7</li>
-  <li class="slide"> Text 8</li>
-</ul>
-<h2>
-  Carousels using slickjs. Full documentation can be found here: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a>
-</h2>
-<h3>
-  This page is a barebones carousel that is mobile-responsive. Requirements are jquery import + slickjs carousel css/js import
-</h3>
+<body>
+  <ul class="slick-carousel-hp">
+    <li> Text 1</li>
+    <li> Text 2</li>
+    <li> Text 3</li>
+    <li> Text 4</li>
+    <li> Text 5</li>
+    <li> Text 6</li>
+    <li> Text 7</li>
+    <li> Text 8</li>
+  </ul>
+  <h2>
+    Carousels using slickjs. Full documentation can be found here: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a>
+  </h2>
+  <h3>
+    This page is a barebones carousel that is mobile-responsive. Requirements are jquery import + slickjs carousel css/js import
+  </h3>
+</body>
 
 <script>
   $(document).ready(function(){
